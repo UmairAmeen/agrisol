@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::DASHBOARD;
 
     /**
      * Create a new controller instance.
@@ -81,7 +81,7 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         //
-        return response()->json(['message' => 'Your Account is Created Successfully','action'=>'redirect','do'=>url('/home')], 200);
+        return response()->json(['message' => 'Your Account is Created Successfully','action'=>'redirect','do'=>url('/dashboard')], 200);
         //The rest of the functions you want to be called can be done here (eg AJAX)
     }
 }

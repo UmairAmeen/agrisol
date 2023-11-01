@@ -95,9 +95,15 @@
                     @include('includes.admin_navbar')
                     <div class="content-wrapper">
                         @yield('admin-content')
+                        @include('includes.admin_footer')
+                        <div class="content-backdrop fade"></div>
                     </div>
                 </div>
             </div>
+              <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
         </div>
         @endif
     @endif
