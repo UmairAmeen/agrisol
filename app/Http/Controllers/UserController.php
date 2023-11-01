@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\NotifyUser;
 use Spatie\Permission\Models\Role;
 use DB;
 use Hash;
@@ -134,5 +135,27 @@ class UserController extends Controller
         User::find($id)->delete();
         return redirect()->route('users.index')
                         ->with('success','User deleted successfully');
+    }
+
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function notify_user(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email|unique:notify_users,email'
+        ]);
+    
+        $input = $request->all();
+    
+        $result = NotifyUser::create($input);
+    
+        if($result)
+        {
+            return response()->json(['message' => 'Thanks for provide us your Email. We will notify you when we launch','action'=>'reset'], 200);
+        }
     }
 }

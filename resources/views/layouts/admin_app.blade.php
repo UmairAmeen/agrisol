@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/demo.css')}}" />
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/cards-statistics.css')}}">
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/cards-analytics.css')}}">
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/page-misc.css')}}">
 
     <!-- Template Customizer Scripts -->
     <script src="{{asset('themes/admin-panel/assets/js/helpers.js')}}"></script>
@@ -75,28 +76,31 @@
 
 </head>
 <body>
-    @guest
-        <div class="position-relative">
-            <div class="authentication-wrapper authentication-basic container-p-y">
-                <div class="authentication-inner py-4">
-                    @yield('auth-content')
-                </div>
-            </div>
-        </div>
+    @if(Route::current()->getName() == 'comming-soon')
+        @yield('admin-content')
     @else
-    <div class="layout-wrapper layout-content-navbar ">
-        <div class="layout-container">
-            @include('includes.admin_sidebar')
-            <div class="layout-page">
-                @include('includes.admin_navbar')
-                <div class="content-wrapper">
-                    @yield('auth-content')
+        @guest
+            <div class="position-relative">
+                <div class="authentication-wrapper authentication-basic container-p-y">
+                    <div class="authentication-inner py-4">
+                        @yield('admin-content')
+                    </div>
+                </div>
+            </div>
+        @else
+        <div class="layout-wrapper layout-content-navbar ">
+            <div class="layout-container">
+                @include('includes.admin_sidebar')
+                <div class="layout-page">
+                    @include('includes.admin_navbar')
+                    <div class="content-wrapper">
+                        @yield('admin-content')
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        @endif
     @endif
-
     <!-- Scripts -->
     <script src="{{asset('themes/admin-panel/assets/plugins/jquery/jquery.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/popper/popper.js')}}"></script>
@@ -211,9 +215,6 @@
                 return;
             case 'reset':
                 resetForm(data, vali, text);
-                if ($("#warehouse").length > 0) {
-                    // $("#warehouse").val("4").trigger("change");
-                }
                 break;
             case 'same_state_datable_reload':
                 var table = $(data).DataTable();
@@ -251,5 +252,8 @@
                 }
                 return;
         }
+    }
+    function resetForm(data, vali, text) {
+        $("form")[0].reset();
     }
 </script>

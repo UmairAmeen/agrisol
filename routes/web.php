@@ -18,9 +18,10 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as'=>'comming-soon', function() {
+    return View::make('pages.misc.comming_soon');
+}]);
+Route::post('notify_user',[UserController::class, 'notify_user'])->name('notify_user');
 
 Auth::routes();
   

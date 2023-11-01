@@ -38,4 +38,18 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        //
+        return response()->json(['message' => 'You Are Successfully Login','action'=>'redirect','do'=>url('/home')], 200);
+        //The rest of the functions you want to be called can be done here (eg AJAX)
+    }
 }

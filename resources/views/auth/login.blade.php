@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('auth-content')
+@section('admin-content')
     <!-- Login -->
     <div class="card p-2">
         <!-- Logo -->
@@ -16,7 +16,7 @@
           <h4 class="mb-2">Welcome to Smart Agrisol! 👋</h4>
           <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-          <form class="mb-3 needs-validation" action="{{ route('login') }}" method="POST">
+          <form class="mb-3 needs-validation" action="{{ route('notify_user') }}" method="POST">
             @csrf
             <div class="form-floating form-floating-outline mb-3">
             <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" autofocus
