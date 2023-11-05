@@ -6,6 +6,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SubProductController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\BussinssController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +33,9 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
+    Route::get('users_datatable', [UserController::class, 'datatable']);
     Route::resource('products', ProductController::class);
+    Route::resource('sub-products', SubProductController::class);
+    Route::resource('services', ServiceController::class);
+    Route::resource('business', BussinssController::class);
 });

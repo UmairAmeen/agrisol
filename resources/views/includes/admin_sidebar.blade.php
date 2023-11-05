@@ -18,8 +18,8 @@
   <div class="menu-inner-shadow"></div>
 
 <ul class="menu-inner py-1">
-  <li class="menu-item ">
-    <a href="app/ecommerce/dashboard.html" class="menu-link" >
+  <li class="menu-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+    <a href="{{route('dashboard')}}" class="menu-link" >
       <div>Dashboard</div>
     </a>
   </li>
@@ -28,125 +28,78 @@
       <div>Products</div>
     </a>
     <ul class="menu-sub">
-      <li class="menu-item ">
-        <a href="app/ecommerce/product/list.html" class="menu-link" >
+      <li class="menu-item {{ request()->routeIs('products.index') ? 'active' : '' }}">
+        <a href="{{route('products.index')}}" class="menu-link" >
           <div>Product List</div>
         </a>
       </li>
-      <li class="menu-item ">
-        <a href="app/ecommerce/product/add.html" class="menu-link" >
+      <li class="menu-item {{ request()->routeIs('products.create') ? 'active' : '' }}">
+        <a href="{{route('products.create')}}" class="menu-link" >
           <div>Add Product</div>
         </a>
       </li>
-      <li class="menu-item ">
-        <a href="app/ecommerce/product/category.html" class="menu-link" >
-          <div>Category List</div>
+      <li class="menu-item {{ request()->routeIs('sub-products.index') ? 'active' : '' }}">
+        <a href="{{route('sub-products.index')}}" class="menu-link" >
+          <div>Sub Product List</div>
         </a>
         </li>
+        <li class="menu-item {{ request()->routeIs('sub-products.create') ? 'active' : '' }}">
+        <a href="{{route('sub-products.create')}}" class="menu-link" >
+          <div>Add Sub Product</div>
+        </a>
+      </li>
       </ul>
     </li>
     <li class="menu-item ">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
-      <div>Order</div>
+      <div>Services</div>
     </a>
     <ul class="menu-sub">
-      <li class="menu-item ">
-        <a href="app/ecommerce/order/list.html" class="menu-link" >
-          <div>Order List</div>
+      <li class="menu-item {{ request()->routeIs('services.index') ? 'active' : '' }}">
+        <a href="{{route('services.index')}}" class="menu-link" >
+          <div>Services List</div>
         </a>
       </li>
-      <li class="menu-item ">
-        <a href="app/ecommerce/order/details.html" class="menu-link" >
-          <div> Order Details</div>
+      <li class="menu-item {{ request()->routeIs('services.create') ? 'active' : '' }}">
+        <a href="{{route('services.create')}}" class="menu-link" >
+          <div>Add Service</div>
         </a>
       </li>
     </ul>
   </li>
   <li class="menu-item ">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
-      <div>Customer</div>
+      <div>Businesses</div>
     </a>
     <ul class="menu-sub">
-      <li class="menu-item ">
-        <a href="app/ecommerce/customer/all.html" class="menu-link" >
-          <div>All Customers</div>
+      <li class="menu-item {{ request()->routeIs('business.index') ? 'active' : '' }}">
+        <a href="{{route('business.index')}}" class="menu-link" >
+          <div>Business List</div>
         </a>
       </li>
-      <li class="menu-item ">
-        <a href="javascript:void(0)" class="menu-link menu-toggle" >
-          <div>Customer Details</div>
-        </a>
-        <ul class="menu-sub">
-          <li class="menu-item ">
-            <a href="app/ecommerce/customer/details/overview.html" class="menu-link" >
-              <div>Overview</div>
-            </a>
-          </li>
-          <li class="menu-item ">
-            <a href="app/ecommerce/customer/details/security.html" class="menu-link" >
-              <div>Security</div>
-            </a>
-          </li>
-          <li class="menu-item ">
-            <a href="app/ecommerce/customer/details/billing.html" class="menu-link" >
-              <div>Address &amp; Billing</div>
-            </a>
-          </li>
-          <li class="menu-item ">
-            <a href="app/ecommerce/customer/details/notifications.html" class="menu-link" >
-              <div>Notifications</div>
-            </a>
-          </li>
-        </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="menu-item ">
-        <a href="app/ecommerce/manage/reviews.html" class="menu-link" >
-          <div>Manage Reviews</div>
+      <li class="menu-item {{ request()->routeIs('business.create') ? 'active' : '' }}">
+        <a href="{{route('business.create')}}" class="menu-link" >
+          <div>Add Business</div>
         </a>
       </li>
-      <li class="menu-item ">
-        <a href="app/ecommerce/referrals.html" class="menu-link" >
-          <div>Referrals</div>
+    </ul>
+  </li>
+  <li class="menu-item ">
+    <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <div>User Management</div>
+    </a>
+    <ul class="menu-sub">
+      <li class="menu-item {{ request()->routeIs('users.index') ? 'active' : '' }}">
+        <a href="{{route('users.index')}}" class="menu-link" >
+          <div>Users List</div>
         </a>
       </li>
-      <li class="menu-item ">
-        <a href="javascript:void(0)" class="menu-link menu-toggle" >
-            <div>Settings</div>
+      <li class="menu-item {{ request()->routeIs('users.create') ? 'active' : '' }}">
+        <a href="{{route('users.create')}}" class="menu-link" >
+          <div>Add User</div>
         </a>
-        <ul class="menu-sub">
-          <li class="menu-item ">
-            <a href="app/ecommerce/settings/details.html" class="menu-link" >
-              <div>Store details</div>
-            </a>
-          </li>
-          <li class="menu-item ">
-            <a href="app/ecommerce/settings/payments.html" class="menu-link" >
-              <div>Payments</div>
-            </a>
-          </li>
-          <li class="menu-item ">
-            <a href="app/ecommerce/settings/checkout.html" class="menu-link" >
-              <div>Checkout</div>
-            </a>
-          </li>
-          <li class="menu-item ">
-            <a href="app/ecommerce/settings/shipping.html" class="menu-link" >
-              <div>Shipping &amp; Delivery</div>
-            </a>
-            </li>
-            <li class="menu-item ">
-              <a href="app/ecommerce/settings/locations.html" class="menu-link" >
-                <div>Locations</div>
-              </a>
-            </li>
-            <li class="menu-item ">
-              <a href="app/ecommerce/settings/notifications.html" class="menu-link" >
-                <div>Notifications</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 </aside>

@@ -12,19 +12,19 @@
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
               <!-- Search -->
-        <div class="navbar-nav align-items-center">
+        <!-- <div class="navbar-nav align-items-center">
           <div class="nav-item navbar-search-wrapper mb-0">
             <a class="nav-item nav-link search-toggler fw-normal px-0" href="javascript:void(0);">
               <i class="mdi mdi-magnify mdi-24px scaleX-n1-rtl"></i>
               <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
             </a>
           </div>
-        </div>
+        </div> -->
         <!-- /Search -->
       
       <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- Language -->
-        <li class="nav-item dropdown-language dropdown me-1 me-xl-0">
+        <!-- <li class="nav-item dropdown-language dropdown me-1 me-xl-0">
           <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
             <i class='mdi mdi-translate mdi-24px'></i>
           </a>
@@ -50,11 +50,11 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
         <!--/ Language -->
 
                 <!-- Style Switcher -->
-        <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
+        <!-- <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
           <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
             <i class='mdi mdi-24px'></i>
           </a>
@@ -75,11 +75,11 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
         <!--/ Style Switcher -->
         
         <!-- Quick links  -->
-        <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-1 me-xl-0">
+        <!--<li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-1 me-xl-0">
           <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
             <i class='mdi mdi-view-grid-plus-outline mdi-24px'></i>
           </a>
@@ -157,11 +157,11 @@
               </div>
             </div>
           </div>
-        </li>
+        </li> -->
         <!-- Quick links -->
 
         <!-- Notification -->
-        <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-2 me-xl-1">
+        <!-- <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-2 me-xl-1">
           <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
             <i class="mdi mdi-bell-outline mdi-24px"></i>
             <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
@@ -327,14 +327,14 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
         <!--/ Notification -->
 
         <!-- User -->
         <li class="nav-item navbar-dropdown dropdown-user dropdown">
           <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
             <div class="avatar avatar-online">
-              <img src="../demo/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+              <img src="{{asset('themes/admin-panel/assets/images/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle">
             </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">

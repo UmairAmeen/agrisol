@@ -9,6 +9,7 @@ use App\Models\NotifyUser;
 use Spatie\Permission\Models\Role;
 use DB;
 use Hash;
+use DataTables;
 use Illuminate\Support\Arr;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -157,5 +158,21 @@ class UserController extends Controller
         {
             return response()->json(['message' => 'Thanks for provide us your Email. We will notify you when we launch','action'=>'reset'], 200);
         }
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function datatable(Request $request)
+    {
+        $data = User::all();
+        return Datatables::of($data)
+        ->addColumn('actions', function ($row) {
+            return '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="mdi mdi-eye-outline"></i></button><button class="btn btn-sm btn-icon"><i class="mdi mdi-pencil-outline"></i></button><button class="btn btn-sm btn-icon"><i class="mdi mdi-delete-outline"></i></button></div>';
+        })
+        ->rawColumns(['actions'])
+        ->make(true);
     }
 }

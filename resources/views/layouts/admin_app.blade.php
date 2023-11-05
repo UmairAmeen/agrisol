@@ -30,7 +30,11 @@
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/typeahead/typeahead.css')}}" />
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/apex-charts/apex-charts.css')}}" />
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/swiper/swiper.css')}}" />
-
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/datatables/datatables.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/datatables-responsive/datatables-responsive.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/datatables-buttons/datatables-buttons.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/datatables-checkboxes/datatables.checkboxes.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/select2/select2.css')}}" />
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/core.css')}}"/>
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/theme-default.css')}}"/>
@@ -121,6 +125,8 @@
     <script src="{{asset('themes/admin-panel/assets/plugins/swiper/swiper.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/js/main.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/js/dashboards-analytics.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/datatables/datatables.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/select2/select2.js')}}"></script>
     <!-- Validation Scripts -->
     <script src="{{asset('themes/admin-panel/assets/plugins/form-validation/umd/bundle/popular.min.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/form-validation/umd/plugin-bootstrap5/index.min.js')}}"></script>
