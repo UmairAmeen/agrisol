@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('auth-content')
+@section('admin-content')
     <!-- Register Card -->
     <div class="card p-2">
         <!-- Logo -->
