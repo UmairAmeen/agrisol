@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('sub_products', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->integer('product_id');
+            $table->text('description')->nullable();
+            $table->json('images')->nullable();
+            $table->text('model_spec')->nullable();
+            $table->tinyInteger('status')->default(0);
+            $table->integer('added_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

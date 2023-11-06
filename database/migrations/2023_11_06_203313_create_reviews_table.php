@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gallery', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->tinyInteger('status')->default(0);
+            $table->string('name');
+            $table->string('email');
+            $table->text('review')->nullable();
+            $table->double('rating',2,2)->nullable();
+            $table->tinyInteger('is_approved')->default(0);
             $table->integer('added_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('gallery');
+        Schema::dropIfExists('reviews');
     }
 };

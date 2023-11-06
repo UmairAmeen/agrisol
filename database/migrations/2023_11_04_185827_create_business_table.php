@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('business', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->json('images')->nullable();
+            $table->tinyInteger('status')->default(0);
+            $table->integer('added_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
