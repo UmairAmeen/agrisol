@@ -18,6 +18,6 @@ class gallery extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'images', 'status', 'added_by', 'updated_by', 'deleted_by'
+        'title', 'description', 'status', 'added_by', 'updated_by', 'deleted_by'
     ];
 }

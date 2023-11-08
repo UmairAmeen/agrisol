@@ -101,5 +101,22 @@
       </li>
     </ul>
   </li>
+  <li class="menu-item ">
+    <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <div>Others</div>
+    </a>
+    <ul class="menu-sub">
+      <li class="menu-item {{ request()->routeIs('users.index') ? 'active' : '' }}">
+        <a href="{{route('users.index')}}" class="menu-link" >
+          <div>Manage Company</div>
+        </a>
+      </li>
+      <li class="menu-item {{ request()->routeIs('users.create') ? 'active' : '' }}">
+        <a href="{{route('users.create')}}" class="menu-link" >
+          <div>Manage Reviews</div>
+        </a>
+      </li>
+    </ul>
+  </li>
 </ul>
 </aside>

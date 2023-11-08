@@ -18,7 +18,7 @@
 
           <form class="mb-3 needs-validation" action="{{ route('login') }}" method="POST">
             @csrf
-            <div class="form-floating form-floating-outline mb-3">
+            <div class="form-floating form-floating-outline mb-3 validation-field">
             <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" autofocus
               data-fv-notempty="true"
               data-fv-notempty-message="Please enter your email"
@@ -27,7 +27,7 @@
             />
               <label for="email">Email</label>
             </div>
-            <div class="mb-3">
+            <div class="mb-3validation-field">
               <div class="form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
@@ -44,7 +44,7 @@
                 </div>
               </div>
             </div>
-            <div class="mb-3 d-flex justify-content-between">
+            <div class="mb-3 d-flex justify-content-betweenvalidation-field">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember-me" name="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label class="form-check-label" for="remember-me">

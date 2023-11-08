@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::get('users_datatable', [UserController::class, 'datatable']);
     Route::resource('products', ProductController::class);
+    Route::get('products_datatable', [ProductController::class, 'datatable']);
     Route::resource('sub-products', SubProductController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('business', BussinssController::class);

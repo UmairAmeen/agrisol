@@ -139,7 +139,7 @@
 </html>
 
 <script type="text/javascript">
-    $(document).on("submit", "form", function (e) {alert('submit')
+    $(document).on("submit", "form", function (e) {
         form = $(this);
         if ($(form).hasClass('no-ajax')) {return;}
         e.preventDefault();

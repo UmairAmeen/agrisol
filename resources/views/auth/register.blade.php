@@ -17,7 +17,7 @@
 
           <form class="mb-3 needs-validation" action="{{ route('register') }}" method="POST">
             @csrf
-            <div class="form-floating form-floating-outline mb-3">
+            <div class="form-floating form-floating-outline mb-3 validation-field">
               <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" autofocus
                 data-fv-notempty="true"
                 data-fv-notempty-message="Please enter username"
@@ -27,7 +27,7 @@
               />
               <label for="username">Username</label>
             </div>
-            <div class="form-floating form-floating-outline mb-3">
+            <div class="form-floating form-floating-outline mb-3 validation-field">
               <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email"
                 data-fv-notempty="true"
                 data-fv-notempty-message="Please enter your email"
@@ -36,7 +36,7 @@
               />
               <label for="email">Email</label>
             </div>
-            <div class="mb-3 form-password-toggle">
+            <div class="mb-3 form-password-toggle validation-field">
               <div class="input-group input-group-merge">
                 <div class="form-floating form-floating-outline">
                   <input type="password" id="password" class="form-control" name="password" placeholder="..........."
@@ -51,7 +51,7 @@
                 <span class="input-group-text cursor-pointer"><i class="mdi mdi-eye-off-outline"></i></span>
               </div>
             </div>
-            <div class="mb-3 form-password-toggle">
+            <div class="mb-3 form-password-toggle validation-field">
             <div class="input-group input-group-merge">
                 <div class="form-floating form-floating-outline">
                 <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="..........."
