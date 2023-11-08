@@ -133,14 +133,12 @@ class ProductController extends Controller
         $data = Product::all();
         return Datatables::of($data)
         ->editColumn('status', function ($row) {
-            $status = $row->status ? '<span class="badge bg-label-success rounded-pill">Active</span>' : '<span class="badge bg-label-danger rounded-pill">In-Active</span>' ;
+            $status = $row->status ? '<span class="badge bg-label-success rounded-pill">Active</span>' : '<span class="badge bg-label-danger rounded-pill">In-Active</span>';
             return $status;
         })
         ->addColumn('actions', function ($row) {
-            return '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="mdi mdi-eye-outline"></i></button><button class="btn btn-sm btn-icon"><i class="mdi mdi-pencil-outline"></i></button><button class="btn btn-sm btn-icon"><i class="mdi mdi-delete-outline"></i></button></div>';
+            return '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="mdi mdi-eye-outline"></i></button><button class="btn btn-sm btn-icon edit-record" data-record="'.$row.'" data-bs-toggle="offcanvas" data-bs-target="#product_offcanvas"><i class="mdi mdi-pencil-outline"></i></button><button class="btn btn-sm btn-icon delete-record" data-id="'.$row->id.'"><i class="mdi mdi-delete-outline"></i></button></div>';
         })
-        
-        
         ->rawColumns(['status', 'actions'])
         ->make(true);
     }

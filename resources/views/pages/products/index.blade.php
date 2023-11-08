@@ -100,10 +100,10 @@
     </div>
   </div>
   <!-- Offcanvas to add new product -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="add_product_offcanvas" aria-labelledby="add_product_offcanvas_label">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="product_offcanvas" aria-labelledby="product_offcanvas_label">
     <!-- Offcanvas Header -->
     <div class="offcanvas-header py-4">
-      <h5 id="add_product_offcanvas_label" class="offcanvas-title">Add Product</h5>
+      <h5 id="product_offcanvas_label" class="offcanvas-title">Add Product</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <!-- Offcanvas Body -->
@@ -125,7 +125,7 @@
 		<p class="mb-0">Status</p>
 		<div class="w-25 d-flex justify-content-end">
 			<label class="switch switch-success me-4 pe-2">
-			<input type="checkbox" class="switch-input" name="status" checked>
+			<input type="checkbox" class="switch-input" id="status" name="status" checked>
 			<span class="switch-toggle-slider">
 				<span class="switch-on">
 				<span class="switch-off"></span>
@@ -290,10 +290,61 @@ $((function() {
 				className: "add-new btn btn-success ms-n1",
 				attr: {
 					"data-bs-toggle": "offcanvas",
-					"data-bs-target": "#add_product_offcanvas"
+					"data-bs-target": "#product_offcanvas"
 				}
 			}]
 		});
+		$(document).on("click", ".delete-record", (function() {
+			var e = $(this).data("id"),
+				t = $(".dtr-bs-modal.show");
+			t.length && t.modal("hide"), Swal.fire({
+				title: "Are you sure?",
+				text: "You won't be able to revert this!",
+				icon: "warning",
+				showCancelButton: !0,
+				confirmButtonText: "Yes, delete it!",
+				customClass: {
+					confirmButton: "btn btn-primary me-3",
+					cancelButton: "btn btn-label-secondary"
+				},
+				buttonsStyling: !1
+			}).then((function(t) {
+				t.value ? ($.ajax({
+					type: "DELETE",
+					url: "".concat(baseUrl, "user-list/").concat(e),
+					success: function() {
+						o.draw()
+					},
+					error: function(e) {
+						console.log(e)
+					}
+				}), Swal.fire({
+					icon: "success",
+					title: "Deleted!",
+					text: "The user has been deleted!",
+					customClass: {
+						confirmButton: "btn btn-success"
+					}
+				})) : t.dismiss === Swal.DismissReason.cancel && Swal.fire({
+					title: "Cancelled",
+					text: "The User is not deleted!",
+					icon: "error",
+					customClass: {
+						confirmButton: "btn btn-success"
+					}
+				})
+			}))
+		})), $(document).on("click", ".edit-record", (function() {
+			var e = $(this).data("record"),
+				t = $(".dtr-bs-modal.show"),
+				offcanvas_label = $("#product_offcanvas_label"),
+				form = $(offcanvas_label).find("form");console.log(e);
+			t.length && t.modal("hide"), $(offcanvas_label).html("Edit Product"), $(form).attr("action",""),
+			$(form).find("#title").val(e.title)	
+		})), $(".add-new").on("click", (function() {
+			$(offcanvas_label).html("Add Product"), $(form).attr("action","{{ route('products.store') }}"),
+			$(form).find("#title").val("")
+		}));
 		$(".dataTables_length").addClass("mt-0 mt-md-3"), $(".dt-action-buttons").addClass("pt-0"), $(".dt-buttons").addClass("d-flex flex-wrap")
 	}
 	setTimeout((() => {

@@ -27,7 +27,7 @@
             />
               <label for="email">Email</label>
             </div>
-            <div class="mb-3validation-field">
+            <div class="mb-3 validation-field">
               <div class="form-password-toggle">
                 <div class="input-group input-group-merge">
                   <div class="form-floating form-floating-outline">
@@ -44,7 +44,7 @@
                 </div>
               </div>
             </div>
-            <div class="mb-3 d-flex justify-content-betweenvalidation-field">
+            <div class="mb-3 d-flex justify-content-between validation-field">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember-me" name="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label class="form-check-label" for="remember-me">
