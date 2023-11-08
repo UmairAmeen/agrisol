@@ -137,12 +137,52 @@
 
         <!-- Submit and reset -->
         <div class="border-top py-3">
-          <button type="submit" class="btn btn-success me-sm-3 me-1 data-submit">Add</button>
+          <button type="submit" id="product_submit" class="btn btn-success me-sm-3 me-1 data-submit">Add</button>
           <button type="reset" class="btn btn-outline-danger" data-bs-dismiss="offcanvas">Discard</button>
         </div>
       </form>
     </div>
   </div>
+  <!-- Show Product Modal -->
+<div class="modal fade" id="show-product" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+		<h4 class="modal-title">Details of Product</h4>
+		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		<table class="table">
+			<tbody>
+			<tr data-dt-row="8" data-dt-column="2">
+				<td>product:</td>
+				<td>
+				<div class="d-flex justify-content-start align-items-center product-name">
+					<div class="avatar-wrapper me-3">
+					<div class="avatar rounded-2 bg-label-secondary">
+						<img src="https://demos.pixinvent.com/materialize-html-laravel-admin-template/demo/assets/img/ecommerce-images/product-9.png" alt="Product-9" class="rounded-2">
+					</div>
+					</div>
+					<div class="d-flex flex-column">
+					<span class="text-nowrap text-heading fw-medium">Air Jordan</span>
+					<small class="text-truncate d-none d-sm-block">Air Jordan is a line of basketball shoes produced by Nike</small>
+					</div>
+				</div>
+				</td>
+			</tr>
+			<tr data-dt-row="8" data-dt-column="8">
+				<td>status:</td>
+				<td>
+				<span class="badge rounded-pill bg-label-danger" text-capitalized="">Inactive</span>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+</div>
+<!--/ Show Product Modal -->
 </div>
 </div>
 @endsection
@@ -304,30 +344,33 @@ $((function() {
 				showCancelButton: !0,
 				confirmButtonText: "Yes, delete it!",
 				customClass: {
-					confirmButton: "btn btn-primary me-3",
+					confirmButton: "btn btn-success me-3",
 					cancelButton: "btn btn-label-secondary"
 				},
 				buttonsStyling: !1
 			}).then((function(t) {
-				t.value ? ($.ajax({
+				t.value ? (
+					$.ajax({
 					type: "DELETE",
-					url: "".concat(baseUrl, "user-list/").concat(e),
+					url: "{{ url('products') }}/"+e+"",
+					data: {'_token':'{{ csrf_token() }}'},
 					success: function() {
-						o.draw()
+						o.draw();
+						Swal.fire({
+						icon: "success",
+						title: "Deleted!",
+						text: "The Product has been deleted!",
+						customClass: {
+							confirmButton: "btn btn-success"
+						}
+					})
 					},
 					error: function(e) {
 						console.log(e)
 					}
-				}), Swal.fire({
-					icon: "success",
-					title: "Deleted!",
-					text: "The user has been deleted!",
-					customClass: {
-						confirmButton: "btn btn-success"
-					}
 				})) : t.dismiss === Swal.DismissReason.cancel && Swal.fire({
 					title: "Cancelled",
-					text: "The User is not deleted!",
+					text: "The Product is not deleted!",
 					icon: "error",
 					customClass: {
 						confirmButton: "btn btn-success"
@@ -335,15 +378,31 @@ $((function() {
 				})
 			}))
 		})), $(document).on("click", ".edit-record", (function() {
-			var e = $(this).data("record"),
+			var e = $(this).data("id"),
 				t = $(".dtr-bs-modal.show"),
-				offcanvas_label = $("#product_offcanvas_label"),
-				form = $(offcanvas_label).find("form");console.log(e);
-			t.length && t.modal("hide"), $(offcanvas_label).html("Edit Product"), $(form).attr("action",""),
-			$(form).find("#title").val(e.title)	
+				product_offcanvas = $("#product_offcanvas"),
+				offcanvas_label = $(product_offcanvas).find("#product_offcanvas_label"),
+				form = $(product_offcanvas).find("form");
+				t.length && t.modal("hide"), $(offcanvas_label).html("Edit Product"), $.get("{{  url('products') }}/"+e+"/edit", (function(e) {
+					$(form).attr("action","{{ url('products') }}/"+e.id+""),$(form).attr("method","PUT"),
+					$(form).find("#title").val(e.title), $(form).find("#status").prop("checked", e.status === 1), $(form).find("#product_submit").html("Update")
+				}))
 		})), $(".add-new").on("click", (function() {
-			$(offcanvas_label).html("Add Product"), $(form).attr("action","{{ route('products.store') }}"),
-			$(form).find("#title").val("")
+			var product_offcanvas = $("#product_offcanvas"),
+			offcanvas_label = $(product_offcanvas).find("#product_offcanvas_label"),
+			form = $(product_offcanvas).find("form");
+			$(offcanvas_label).html("Add Product"), $(form).attr("action","{{ route('products.store') }}"),$(form).attr("method","POST"),
+			$(form).find("#title").val(""), $(form).find("#status").prop("checked", true), $(form).find("#product_submit").html("Add");
+		})), $(".show-record").on("click", (function() {
+			var e = $(this).data("id"),
+				t = $(".dtr-bs-modal.show"),
+				product_offcanvas = $("#product_offcanvas"),
+				offcanvas_label = $(product_offcanvas).find("#product_offcanvas_label"),
+				form = $(product_offcanvas).find("form");
+				t.length && t.modal("hide"), $(offcanvas_label).html("Edit Product"), $.get("{{  url('products') }}/"+e+"/edit", (function(e) {
+					$(form).attr("action","{{ url('products') }}/"+e.id+""),$(form).attr("method","PUT"),
+					$(form).find("#title").val(e.title), $(form).find("#status").prop("checked", e.status === 1), $(form).find("#product_submit").html("Update")
+				}))
 		}));
 		$(".dataTables_length").addClass("mt-0 mt-md-3"), $(".dt-action-buttons").addClass("pt-0"), $(".dt-buttons").addClass("d-flex flex-wrap")
 	}

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\View\View;
 use DB;
+use Auth;
 use DataTables;
 use Illuminate\Http\RedirectResponse;
 
@@ -53,6 +54,7 @@ class ProductController extends Controller
     {
         $input = $request->all();
         $input['status'] = (isset($input['status']) && $input['status'] == 'on') ? 1 : 0;
+        $input['added_by'] = Auth::id();
 
         try {
             DB::beginTransaction();
@@ -73,9 +75,9 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product): View
+    public function show(Product $product)
     {
-        return view('products.show',compact('product'));
+        return response()->json($product);
     }
     
     /**
@@ -84,9 +86,9 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product): View
+    public function edit(Product $product)
     {
-        return view('products.edit',compact('product'));
+        return response()->json($product);
     }
     
     /**
@@ -96,17 +98,23 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product): RedirectResponse
+    public function update(Request $request, Product $product)
     {
-         request()->validate([
-            'name' => 'required',
-            'detail' => 'required',
-        ]);
-    
-        $product->update($request->all());
-    
-        return redirect()->route('products.index')
-                        ->with('success','Product updated successfully');
+        $input = $request->all();
+        $input['status'] = (isset($input['status']) && $input['status'] == 'on') ? 1 : 0;
+        $input['updated_by'] = Auth::id();
+
+        try {
+            DB::beginTransaction();
+
+            $product->update($input);
+
+            DB::commit();
+            return response()->json(['message' => 'Product is successfully updated','action'=>'redirect','do'=>url('/products')], 200);
+        } catch (Exception $e) {
+            DB::rollBack();
+            return response()->json(['message' => $e->getMessage(),'action'=>'redirect','do'=>url('/products')], 500);
+        }
     }
     
     /**
@@ -115,12 +123,20 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product): RedirectResponse
+    public function destroy(Product $product)
     {
-        $product->delete();
-    
-        return redirect()->route('products.index')
-                        ->with('success','Product deleted successfully');
+        try {
+            DB::beginTransaction();
+
+            $product->update(['deleted_by' => Auth::id()]);
+            $product->delete();
+
+            DB::commit();
+            return response()->json(['message' => 'Product is successfully deleted','action'=>'redirect','do'=>url('/products')], 200);
+        } catch (Exception $e) {
+            DB::rollBack();
+            return response()->json(['message' => $e->getMessage(),'action'=>'redirect','do'=>url('/products')], 500);
+        }
     }
 
     /**
@@ -137,7 +153,7 @@ class ProductController extends Controller
             return $status;
         })
         ->addColumn('actions', function ($row) {
-            return '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon"><i class="mdi mdi-eye-outline"></i></button><button class="btn btn-sm btn-icon edit-record" data-record="'.$row.'" data-bs-toggle="offcanvas" data-bs-target="#product_offcanvas"><i class="mdi mdi-pencil-outline"></i></button><button class="btn btn-sm btn-icon delete-record" data-id="'.$row->id.'"><i class="mdi mdi-delete-outline"></i></button></div>';
+            return '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon show-record" data-id="'.$row->id.'" data-bs-toggle="modal" data-bs-target="#show-product"><i class="mdi mdi-eye-outline"></i></button><button class="btn btn-sm btn-icon edit-record" data-id="'.$row->id.'" data-bs-toggle="offcanvas" data-bs-target="#product_offcanvas"><i class="mdi mdi-pencil-outline"></i></button><button class="btn btn-sm btn-icon delete-record" data-id="'.$row->id.'"><i class="mdi mdi-delete-outline"></i></button></div>';
         })
         ->rawColumns(['status', 'actions'])
         ->make(true);
