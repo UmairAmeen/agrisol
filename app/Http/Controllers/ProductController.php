@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        return view('pages.products.index');
+        return view('admin_pages.products.index');
     }
     
     /**

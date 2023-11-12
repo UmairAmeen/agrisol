@@ -1,0 +1,335 @@
+
+  .the-landscaper-home .navigationbuttons,
+  .the-landscaper-home .esg-pagination,
+  .the-landscaper-home .esg-filters {
+    text-transform: uppercase;
+    text-align: center
+  }
+
+  .the-landscaper-home .esg-filterbutton {
+    position: relative
+  }
+
+  .the-landscaper-home .esg-loadmore-wrapper {
+    margin-top: 30px
+  }
+
+  .the-landscaper-home .esg-filterbutton,
+  .the-landscaper-home .esg-sortbutton,
+  .the-landscaper-home .esg-cartbutton {
+    display: block;
+    padding: 15px 22px;
+    color: #cecece;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 2;
+    text-transform: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    transition: all 100ms ease-in
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-left {
+    border-color: #50524B
+  }
+
+  @media(min-width:992px) {
+
+    .the-landscaper-home .esg-filterbutton,
+    .the-landscaper-home .esg-sortbutton,
+    .the-landscaper-home .esg-cartbutton {
+      position: relative;
+      display: inline-block;
+      border-right: 1px solid rgba(0, 0, 0, .1);
+      margin-right: 7px;
+      border: 2px solid #DCDCDC;
+      color: #999999
+    }
+
+    .the-landscaper-home .esg-filter-checked {
+      padding: 1px 3px;
+      color: #cbcbcb;
+      background: #cbcbcb;
+      margin-left: 7px;
+      font-size: 9px;
+      font-weight: 300;
+      line-height: 9px;
+      vertical-align: middle
+    }
+  }
+
+  .the-landscaper-home .esg-filterbutton.selected,
+  .the-landscaper-home .esg-filterbutton:hover {
+    background-color: #A2C046;
+    color: #ffffff;
+    border-color: #A2C046
+  }
+
+  .the-landscaper-home .esg-navigationbutton {
+    position: relative;
+    display: inline-block;
+    padding: 13px 22px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #a2c046;
+    -webkit-transform: skew(-25deg);
+    transform: skew(-25deg);
+    -webkit-transition: all 100ms ease-out;
+    transition: all 100ms ease-out
+  }
+
+  .the-landscaper-home .esg-navigationbutton * {
+    display: inline-block;
+    -webkit-transform: skew(25deg);
+    transform: skew(25deg)
+  }
+
+  .the-landscaper-home .esg-navigationbutton:hover {
+    color: #ffffff;
+    background-color: #98b63c
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-left:before,
+  .the-landscaper-home .esg-navigationbutton.esg-right::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    -webkit-transform: skew(25deg);
+    transform: skew(25deg);
+    -webkit-transition: all 100ms ease-out;
+    transition: all 100ms ease-out
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-left {
+    padding: 14px 22px 14px 11px;
+    border-radius: 0 0 0 2px
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-right {
+    padding: 14px 11px 14px 22px;
+    border-radius: 0 2px 2px 0
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-right:before {
+    right: -12px;
+    border-width: 0 0 50px 48px;
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgb(162, 192, 70) rgba(255, 255, 255, 0);
+    border-radius: 0 2px 2px 0
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-left::before {
+    left: -12px;
+    border-width: 50px 48px 0 0;
+    border-radius: 2px 0 0 2px;
+    border-color: rgb(162, 192, 70) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-left:hover::before {
+    border-color: #9ab83f rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-right:hover::before {
+    border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #9ab83f rgba(255, 255, 255, 0)
+  }
+
+  .the-landscaper-home .esg-navigationbutton.esg-right::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 48px;
+    left: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1)
+  }
+
+  .the-landscaper-home .esg-sortbutton-order.tp-desc:hover {
+    color: #333333
+  }
+
+  .the-landscaper-home .esg-sortbutton-wrapper,
+  .the-landscaper-home .esg-cartbutton-wrapper {
+    display: inline-block
+  }
+
+  .the-landscaper-home .esg-sortbutton-order,
+  .the-landscaper-home .esg-cartbutton-order {
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    width: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+    cursor: pointer;
+    background: #eee;
+    background: #fff;
+    margin-left: 5px
+  }
+
+  .the-landscaper-home .esg-cartbutton {
+    color: #fff;
+    cursor: default !important
+  }
+
+  .the-landscaper-home .esg-cartbutton .esgicon-basket {
+    color: #fff;
+    font-size: 15px;
+    line-height: 15px;
+    margin-right: 10px
+  }
+
+  .the-landscaper-home .esg-cartbutton-wrapper {
+    cursor: default !important
+  }
+
+  .the-landscaper-home .esg-sortbutton,
+  .the-landscaper-home .esg-cartbutton {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 0px;
+    border-radius: 2px
+  }
+
+  .eg-the-landscaper-home-element-4 {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    color: #a2c046 !important;
+    font-weight: 800 !important;
+    padding: 0px 0px 0px 0px !important;
+    border-radius: 0px 0px 0px 0px !important;
+    background: transparent !important;
+    z-index: 2 !important;
+    display: block;
+    font-family: "Roboto" !important;
+    text-transform: uppercase !important
+  }
+
+  .eg-the-landscaper-home-element-2 {
+    font-size: 13px;
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: 800;
+    padding: 8px 15px 8px 15px;
+    border-radius: 1px 1px 1px 1px;
+    background: #a2c046;
+    z-index: 2 !important;
+    display: block;
+    font-family: "Roboto";
+    text-transform: capitalize
+  }
+
+  .eg-the-landscaper-home-element-0 {
+    font-size: 18px;
+    line-height: 25px;
+    color: #ababab;
+    font-weight: 700;
+    padding: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    background: transparent;
+    z-index: 2 !important;
+    display: block;
+    font-family: "Roboto Slab";
+    text-transform: capitalize
+  }
+
+  .eg-the-landscaper-home-element-4:hover {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    color: #a2c046 !important;
+    font-weight: 800 !important;
+    border-radius: 0px 0px 0px 0px !important;
+    background: transparent !important;
+    font-family: "Roboto" !important;
+    text-transform: uppercase !important
+  }
+
+  .eg-the-landscaper-home-element-2:hover {
+    font-size: 13px;
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: 800;
+    border-radius: 1px 1px 1px 1px;
+    background: #92ad3f;
+    font-family: "Roboto";
+    text-transform: capitalize
+  }
+
+  .eg-the-landscaper-home-element-0:hover {
+    font-size: 18px;
+    line-height: 25px;
+    color: #f4f4f4;
+    font-weight: 700;
+    border-radius: 0px 0px 0px 0px;
+    background: transparent;
+    font-family: "Roboto Slab";
+    text-transform: capitalize
+  }
+
+  .eg-the-landscaper-home-element-4-a {
+    font-size: 13px !important;
+    line-height: 16px !important;
+    color: #a2c046 !important;
+    font-family: "Roboto" !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: normal !important;
+    display: inline-block !important;
+    float: none !important;
+    clear: none !important;
+    margin: 0px 0px 10px 0px !important;
+    position: relative !important
+  }
+
+  .eg-the-landscaper-home-element-2-a {
+    display: inline-block;
+    float: none;
+    clear: both;
+    margin: 0px 0px 0px 0px;
+    position: relative
+  }
+
+  .eg-the-landscaper-home-element-0-a {
+    display: block;
+    text-align: center;
+    clear: both;
+    margin: 0px 0px 0px 0px;
+    position: relative
+  }
+
+  .eg-the-landscaper-home-container {
+    background: rgba(0, 0, 0, 0.75)
+  }
+
+  .eg-the-landscaper-home-content {
+    background: transparent;
+    padding: 20px 30px 0px 30px;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-color: transparent;
+    border-style: double;
+    text-align: center
+  }
+
+  .esg-grid .mainul li.eg-the-landscaper-home-wrapper {
+    background: transparent;
+    padding: 0px 0px 0px 0px;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-color: transparent;
+    border-style: none
+  }
+
+  .esg-grid .mainul li.eg-the-landscaper-home-wrapper .esg-media-poster {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat
+  }
+                    

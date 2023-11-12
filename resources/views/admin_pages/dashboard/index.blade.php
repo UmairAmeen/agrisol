@@ -12,7 +12,7 @@
                 <h4 class="card-title pb-xl-2">Hi {{auth()->user()->name}}🎉</h4>
                 <p class="mb-0">Dasboard does not complete yet.</p>
                 <p>Check your Site landing Pages</p>
-                <a href="#" class="btn btn-success">View Your Site</a>
+                <a href="{{ route('home') }}" class="btn btn-success">View Your Site</a>
               </div>
             </div>
             <div class="col-md-6 text-center text-md-end order-1 order-md-2">

@@ -10,6 +10,8 @@ use App\Http\Controllers\SubProductController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\BussinssController;
 
+use App\Http\Controllers\LandingPagesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +24,7 @@ use App\Http\Controllers\BussinssController;
 */
 
 Route::get('/', ['as'=>'comming-soon', function() {
-    return View::make('pages.misc.comming_soon');
+    return View::make('admin_pages.misc.comming_soon');
 }]);
 Route::post('notify_user',[UserController::class, 'notify_user'])->name('notify_user');
 
@@ -40,3 +42,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('services', ServiceController::class);
     Route::resource('business', BussinssController::class);
 });
+
+Route::get('/home', [LandingPagesController::class, 'home'])->name('home');

@@ -3,97 +3,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-  
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Smart-AgriSol') }}</title>
+    <link rel="shortcut icon" href="{{asset('images/logo/logo.png')}}">
     <!-- Fonts -->
-
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
-  
-
-    <!-- Scripts -->
-
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700%7CRoboto%20Slab%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700%7CRoboto%20Slab%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;display=swap" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700%7CRoboto%20Slab%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;display=swap" />
+     <!-- Plugins -->
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/plugins/bootstrap/css/bootstrap.custom.min.css')}}" rel="stylesheet">
+    <!-- Styles -->
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/css/style.css')}}" rel="stylesheet">
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/css/main.css')}}" rel="stylesheet">
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/css/flex.css')}}" rel="stylesheet">
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/css/settings.css')}}" rel="stylesheet"/>
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/css/fontello.css')}}" rel="stylesheet"/>
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/css/gallery.css')}}" rel="stylesheet">
+    <!-- Icons -->
+    <link type='text/css' href="{{asset('themes/landing-pages/assets/icon/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 </head>
 <body>
 
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel 10 User Roles and Permissions - ItSolutionStuff.com
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-  
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  
-                    <ul class="navbar-nav me-auto">
-  
-                    </ul>
-  
-                  
-                    <ul class="navbar-nav ms-auto">
-                       
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-  
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                            <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-  
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-  
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-  
-        <main class="py-4">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                @yield('content')
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-          
+    <div>
+        @include('includes.header')
+        @yield('content')
+        @include('includes.footer')
     </div>
+
+    <!-- Scripts -->
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/plugins/jquery/js/jquery.min.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/plugins/jquery/js/jquery-migrate.min.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/plugins/bootstrap/js/bootstrap.custom.min.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/underscore.min.js')}}"></script>
+    <script type='text/javascript'>var TheLandscaper = {};</script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/main.js')}}"></script>
+    <script type='text/javascript'>
+      var panelsStyles = {
+        "fullContainer": "body",
+        "stretchRows": "1"
+      };
+    </script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/styling.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/gallery.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/rbtools.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/esg.js')}}"></script>
+    @yield('script')
+
 </body>
 </html>
