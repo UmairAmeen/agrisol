@@ -161,7 +161,7 @@
         <!-- Quick links -->
 
         <!-- Notification -->
-        <!-- <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-2 me-xl-1">
+        <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-2 me-xl-1">
           <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
             <i class="mdi mdi-bell-outline mdi-24px"></i>
             <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
@@ -327,7 +327,7 @@
               </a>
             </li>
           </ul>
-        </li> -->
+        </li>
         <!--/ Notification -->
 
         <!-- User -->
@@ -348,7 +348,7 @@
                   </div>
                   <div class="flex-grow-1">
                     <span class="fw-medium d-block">
-                                            John Doe
+                                            {{auth()->user()->name}}
                                           </span>
                     <small class="text-muted">Admin</small>
                   </div>
@@ -362,12 +362,6 @@
               <a class="dropdown-item" href="pages/profile-user.html">
                 <i class="mdi mdi-account-outline me-2"></i>
                 <span class="align-middle">My Profile</span>
-              </a>
-            </li>
-                        <li>
-              <a class="dropdown-item" href="pages/account-settings-billing.html">
-                <i class="mdi mdi-credit-card-outline me-2"></i>
-                <span class="align-middle">Billing</span>
               </a>
             </li>
                         <li>

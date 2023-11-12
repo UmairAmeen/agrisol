@@ -155,25 +155,19 @@
 		<table class="table">
 			<tbody>
 			<tr data-dt-row="8" data-dt-column="2">
-				<td>product:</td>
+				<td>Title:</td>
 				<td>
 				<div class="d-flex justify-content-start align-items-center product-name">
-					<div class="avatar-wrapper me-3">
-					<div class="avatar rounded-2 bg-label-secondary">
-						<img src="https://demos.pixinvent.com/materialize-html-laravel-admin-template/demo/assets/img/ecommerce-images/product-9.png" alt="Product-9" class="rounded-2">
-					</div>
-					</div>
 					<div class="d-flex flex-column">
-					<span class="text-nowrap text-heading fw-medium">Air Jordan</span>
-					<small class="text-truncate d-none d-sm-block">Air Jordan is a line of basketball shoes produced by Nike</small>
+						<span id="show_title"></span>
 					</div>
 				</div>
 				</td>
 			</tr>
 			<tr data-dt-row="8" data-dt-column="8">
-				<td>status:</td>
+				<td>Status:</td>
 				<td>
-				<span class="badge rounded-pill bg-label-danger" text-capitalized="">Inactive</span>
+				<span id="show_status" class="badge rounded-pill" text-capitalized=""></span>
 				</td>
 			</tr>
 			</tbody>
@@ -393,15 +387,20 @@ $((function() {
 			form = $(product_offcanvas).find("form");
 			$(offcanvas_label).html("Add Product"), $(form).attr("action","{{ route('products.store') }}"),$(form).attr("method","POST"),
 			$(form).find("#title").val(""), $(form).find("#status").prop("checked", true), $(form).find("#product_submit").html("Add");
-		})), $(".show-record").on("click", (function() {
+		})), $(document).on("click", ".show-record", (function() {
 			var e = $(this).data("id"),
-				t = $(".dtr-bs-modal.show"),
-				product_offcanvas = $("#product_offcanvas"),
-				offcanvas_label = $(product_offcanvas).find("#product_offcanvas_label"),
-				form = $(product_offcanvas).find("form");
-				t.length && t.modal("hide"), $(offcanvas_label).html("Edit Product"), $.get("{{  url('products') }}/"+e+"/edit", (function(e) {
-					$(form).attr("action","{{ url('products') }}/"+e.id+""),$(form).attr("method","PUT"),
-					$(form).find("#title").val(e.title), $(form).find("#status").prop("checked", e.status === 1), $(form).find("#product_submit").html("Update")
+				t = $(".dtr-bs-modal.show");
+				t.length && t.modal("hide"), $.get("{{  url('products') }}/"+e, (function(e) {
+					$("#show_title").html(e.title);
+					if(e.status === 1)
+					{
+						$("#show_status").removeClass("bg-label-danger");
+					 	$("#show_status").html("Active").addClass("bg-label-success");
+					}
+					else{
+						$("#show_status").removeClass("bg-label-success");
+						$("#show_status").html("In-Active").addClass("bg-label-danger");
+					}
 				}))
 		}));
 		$(".dataTables_length").addClass("mt-0 mt-md-3"), $(".dt-action-buttons").addClass("pt-0"), $(".dt-buttons").addClass("d-flex flex-wrap")

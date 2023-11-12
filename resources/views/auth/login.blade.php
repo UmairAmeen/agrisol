@@ -52,9 +52,9 @@
                 </label>
               </div>
               @if (Route::has('password.request'))
-              <a href="{{ route('password.request') }}" class="float-end mb-1">
+              <!-- <a href="{{ route('password.request') }}" class="float-end mb-1">
                 <span>Forgot Password?</span>
-              </a>
+              </a> -->
               @endif
             </div>
             <div class="mb-3">

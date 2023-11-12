@@ -12,10 +12,11 @@
         </div>
         <!-- /Logo -->
         <div class="card-body mt-2">
-          <h4 class="mb-2">Adventure starts here 🚀</h4>
-          <p class="mb-4">Make your app management easy and fun!</p>
+          <p class="mb-4">Registration is close for some reason</p>
+          <!-- <h4 class="mb-2">Adventure starts here 🚀</h4>
+          <p class="mb-4">Make your app management easy and fun!</p> -->
 
-          <form class="mb-3 needs-validation" action="{{ route('register') }}" method="POST">
+          <!-- <form class="mb-3 needs-validation" action="{{ route('register') }}" method="POST">
             @csrf
             <div class="form-floating form-floating-outline mb-3 validation-field">
               <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" autofocus
@@ -86,9 +87,9 @@
             <button class="btn btn-success d-grid w-100" type="submit">
               Sign up
             </button>
-          </form>
+          </form> -->
 
-          <p class="text-center">
+          <!-- <p class="text-center">
             <span>Already have an account?</span>
             <a href="login-basic.html">
               <span>Sign in instead</span>
@@ -115,7 +116,7 @@
             <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">
               <i class="tf-icons mdi mdi-24px mdi-google"></i>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- Register Card -->

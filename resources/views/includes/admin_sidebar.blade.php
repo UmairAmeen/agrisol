@@ -20,22 +20,19 @@
 <ul class="menu-inner py-1">
   <li class="menu-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
     <a href="{{route('dashboard')}}" class="menu-link" >
+      <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
       <div>Dashboard</div>
     </a>
   </li>
-  <li class="menu-item ">
+  <li class="menu-item main">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <i class="menu-icon tf-icons mdi mdi-view-grid-outline"></i>
       <div>Products</div>
     </a>
     <ul class="menu-sub">
       <li class="menu-item {{ request()->routeIs('products.index') ? 'active' : '' }}">
         <a href="{{route('products.index')}}" class="menu-link" >
           <div>Product List</div>
-        </a>
-      </li>
-      <li class="menu-item {{ request()->routeIs('products.create') ? 'active' : '' }}">
-        <a href="{{route('products.create')}}" class="menu-link" >
-          <div>Add Product</div>
         </a>
       </li>
       <li class="menu-item {{ request()->routeIs('sub-products.index') ? 'active' : '' }}">
@@ -50,8 +47,9 @@
       </li>
       </ul>
     </li>
-    <li class="menu-item ">
+    <li class="menu-item main">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <i class="menu-icon tf-icons mdi mdi-notebook-outline"></i>
       <div>Services</div>
     </a>
     <ul class="menu-sub">
@@ -67,8 +65,9 @@
       </li>
     </ul>
   </li>
-  <li class="menu-item ">
+  <li class="menu-item main">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <i class="menu-icon tf-icons mdi mdi-file-document-outline"></i>
       <div>Businesses</div>
     </a>
     <ul class="menu-sub">
@@ -84,8 +83,9 @@
       </li>
     </ul>
   </li>
-  <li class="menu-item ">
+  <li class="menu-item main">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
       <div>User Management</div>
     </a>
     <ul class="menu-sub">
@@ -101,8 +101,9 @@
       </li>
     </ul>
   </li>
-  <li class="menu-item ">
+  <li class="menu-item main">
     <a href="javascript:void(0)" class="menu-link menu-toggle" >
+      <i class="menu-icon tf-icons mdi mdi-lifebuoy"></i>
       <div>Others</div>
     </a>
     <ul class="menu-sub">
