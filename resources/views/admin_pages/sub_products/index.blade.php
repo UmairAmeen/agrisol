@@ -3,7 +3,7 @@
 @section('admin-content')
 <div class="container-xxl flex-grow-1 container-p-y">
    <h4 class="py-3 mb-4">
-    <span class="text-muted fw-light">Users List</span>
+    <span class="text-muted fw-light">Sub Products List</span>
   </h4>
 
 <!-- Product List Widget -->
@@ -91,14 +91,93 @@
           <tr>
 			<th></th>
             <th>ID</th>
-            <th>Name</th>
-            <th>Email Address</th>
+            <th>Title</th>
+            <th>Status</th>
 			<th>Actions</th>
           </tr>
         </thead>
       </table>
     </div>
   </div>
+  <!-- Offcanvas to add new product -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="product_offcanvas" aria-labelledby="product_offcanvas_label">
+    <!-- Offcanvas Header -->
+    <div class="offcanvas-header py-4">
+      <h5 id="product_offcanvas_label" class="offcanvas-title">Add Product</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <!-- Offcanvas Body -->
+    <div class="offcanvas-body border-top">
+      <form class="pt-0 needs-validation" action="{{ route('products.store') }}" method="POST">
+	  @csrf
+        <!-- Title -->
+
+        <div class="form-floating form-floating-outline mb-4 validation-field">
+          <input type="text" class="form-control" id="title" placeholder="Enter product title" name="title"
+		  	data-fv-notempty="true"
+            data-fv-notempty-message="Please enter product title"
+		  />
+          <label for="title">Title</label>
+        </div>
+
+        <!-- Status -->
+        <div class="d-flex justify-content-between align-items-center border-top py-3">
+		<p class="mb-0">Status</p>
+		<div class="w-25 d-flex justify-content-end">
+			<label class="switch switch-success me-4 pe-2">
+			<input type="checkbox" class="switch-input" id="status" name="status" checked>
+			<span class="switch-toggle-slider">
+				<span class="switch-on">
+				<span class="switch-off"></span>
+				</span>
+			</span>
+			</label>
+		</div>
+		</div>
+
+        <!-- Submit and reset -->
+        <div class="border-top py-3">
+          <button type="submit" id="product_submit" class="btn btn-success me-sm-3 me-1 data-submit">Add</button>
+          <button type="reset" class="btn btn-outline-danger" data-bs-dismiss="offcanvas">Discard</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Show Product Modal -->
+<div class="modal fade" id="show-product" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+		<h4 class="modal-title">Details of Product</h4>
+		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		<table class="table">
+			<tbody>
+			<tr data-dt-row="8" data-dt-column="2">
+				<td>Title:</td>
+				<td>
+				<div class="d-flex justify-content-start align-items-center product-name">
+					<div class="d-flex flex-column">
+						<span id="show_title"></span>
+					</div>
+				</div>
+				</td>
+			</tr>
+			<tr data-dt-row="8" data-dt-column="8">
+				<td>Status:</td>
+				<td>
+				<span id="show_status" class="badge rounded-pill" text-capitalized=""></span>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+</div>
+<!--/ Show Product Modal -->
+</div>
 </div>
 @endsection
 
@@ -111,18 +190,18 @@ $((function() {
 	isDarkStyle ? (t = config.colors_dark.borderColor, e = config.colors_dark.bodyBg, n = config.colors_dark.headingColor) : (t = config.colors.borderColor, e = config.colors.bodyBg, n = config.colors.headingColor);
     
 	var a = $(".datatables-products"),
-		s = "{{route('products.create')}}";
+		s = "{{route('sub-products.create')}}";
 	if (a.length) {
 		a.DataTable({
-			ajax: "/users_datatable",
+			ajax: "/products_datatable",
 			columns: [{
 				data: "id"
 			},{
 				data: "id"
 			}, {
-				data: "name"
+				data: "title"
 			}, {
-				data: "email"
+				data: "status"
 			},{
 				data: "actions", "orderable": false, "searchable": false 
 			}],
@@ -144,7 +223,7 @@ $((function() {
 			language: {
 				sLengthMenu: "_MENU_",
 				search: "",
-				searchPlaceholder: "Search User",
+				searchPlaceholder: "Search Sub Product",
 				info: "Displaying _START_ to _END_ of _TOTAL_ entries"
 			},
 			buttons: [{
@@ -241,13 +320,88 @@ $((function() {
 					}
 				}]
 			}, {
-				text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add User</span>',
+				text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Sub Product</span>',
 				className: "add-new btn btn-success ms-n1",
 				action: function() {
 					window.location.href = s
 				}
 			}]
 		});
+		$(document).on("click", ".delete-record", (function() {
+			var e = $(this).data("id"),
+				t = $(".dtr-bs-modal.show");
+			t.length && t.modal("hide"), Swal.fire({
+				title: "Are you sure?",
+				text: "You won't be able to revert this!",
+				icon: "warning",
+				showCancelButton: !0,
+				confirmButtonText: "Yes, delete it!",
+				customClass: {
+					confirmButton: "btn btn-success me-3",
+					cancelButton: "btn btn-label-secondary"
+				},
+				buttonsStyling: !1
+			}).then((function(t) {
+				t.value ? (
+					$.ajax({
+					type: "DELETE",
+					url: "{{ url('products') }}/"+e+"",
+					data: {'_token':'{{ csrf_token() }}'},
+					success: function() {
+						o.draw();
+						Swal.fire({
+						icon: "success",
+						title: "Deleted!",
+						text: "The Product has been deleted!",
+						customClass: {
+							confirmButton: "btn btn-success"
+						}
+					})
+					},
+					error: function(e) {
+						console.log(e)
+					}
+				})) : t.dismiss === Swal.DismissReason.cancel && Swal.fire({
+					title: "Cancelled",
+					text: "The Product is not deleted!",
+					icon: "error",
+					customClass: {
+						confirmButton: "btn btn-success"
+					}
+				})
+			}))
+		})), $(document).on("click", ".edit-record", (function() {
+			var e = $(this).data("id"),
+				t = $(".dtr-bs-modal.show"),
+				product_offcanvas = $("#product_offcanvas"),
+				offcanvas_label = $(product_offcanvas).find("#product_offcanvas_label"),
+				form = $(product_offcanvas).find("form");
+				t.length && t.modal("hide"), $(offcanvas_label).html("Edit Product"), $.get("{{  url('products') }}/"+e+"/edit", (function(e) {
+					$(form).attr("action","{{ url('products') }}/"+e.id+""),$(form).attr("method","PUT"),
+					$(form).find("#title").val(e.title), $(form).find("#status").prop("checked", e.status === 1), $(form).find("#product_submit").html("Update")
+				}))
+		})), $(".add-new").on("click", (function() {
+			var product_offcanvas = $("#product_offcanvas"),
+			offcanvas_label = $(product_offcanvas).find("#product_offcanvas_label"),
+			form = $(product_offcanvas).find("form");
+			$(offcanvas_label).html("Add Product"), $(form).attr("action","{{ route('products.store') }}"),$(form).attr("method","POST"),
+			$(form).find("#title").val(""), $(form).find("#status").prop("checked", true), $(form).find("#product_submit").html("Add");
+		})), $(document).on("click", ".show-record", (function() {
+			var e = $(this).data("id"),
+				t = $(".dtr-bs-modal.show");
+				t.length && t.modal("hide"), $.get("{{  url('products') }}/"+e, (function(e) {
+					$("#show_title").html(e.title);
+					if(e.status === 1)
+					{
+						$("#show_status").removeClass("bg-label-danger");
+					 	$("#show_status").html("Active").addClass("bg-label-success");
+					}
+					else{
+						$("#show_status").removeClass("bg-label-success");
+						$("#show_status").html("In-Active").addClass("bg-label-danger");
+					}
+				}))
+		}));
 		$(".dataTables_length").addClass("mt-0 mt-md-3"), $(".dt-action-buttons").addClass("pt-0"), $(".dt-buttons").addClass("d-flex flex-wrap")
 	}
 	setTimeout((() => {

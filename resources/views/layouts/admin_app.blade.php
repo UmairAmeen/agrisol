@@ -36,6 +36,11 @@
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/datatables-checkboxes/datatables.checkboxes.css')}}" />
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/select2/select2.css')}}" />
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/sweetalert2/sweetalert2.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/quill/typography.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/quill/katex.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/quill/editor.css')}}" />
+    <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/plugins/dropzone/dropzone.css')}}" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/core.css')}}"/>
     <link rel="stylesheet" href="{{asset('themes/admin-panel/assets/css/theme-default.css')}}"/>
@@ -129,6 +134,10 @@
     <script src="{{asset('themes/admin-panel/assets/plugins/datatables/datatables.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/select2/select2.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/sweetalert2/sweetalert2.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/quill/katex.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/quill/quill.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/dropzone/dropzone.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/jquery-repeater/jquery-repeater.js')}}"></script>
     <!-- Validation Scripts -->
     <script src="{{asset('themes/admin-panel/assets/plugins/form-validation/umd/bundle/popular.min.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/form-validation/umd/plugin-bootstrap5/index.min.js')}}"></script>

@@ -56,98 +56,98 @@
       <nav id="navbar" class="collapse navbar-collapse" aria-label="Main Navigation">
         <ul id="menu-primary-navigation" class="main-navigation">
           <li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="index.html">Home</a>
+            <a href="{{route('home')}}">Home</a>
           </li>
           <li id="menu-item-6697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6697" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="about-us/index.html">About</a>
+            <a href="{{route('about-us')}}">About</a>
             <ul class="sub-menu" role="menu">
               <li id="menu-item-6740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6740">
-                <a href="about-us/index.html">About Us</a>
+                <a href="{{route('about-us')}}">About Us</a>
               </li>
               <li id="menu-item-6710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6710">
-                <a href="prices-and-delivery/index.html">Our Team</a>
+                <a href="#">Our Team</a>
               </li>
             </ul>
           </li>
           <li id="menu-item-6711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6711" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="services/index.html">Businesses</a>
+            <a href="{{route('home.bussiness')}}">Businesses</a>
             <ul class="sub-menu" role="menu">
               <li id="menu-item-6713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6713">
-                <a href="services/lawn-and-garden-care/index.html">Landscape Irrigation System</a>
+                <a href="{{route('landscape-irrigation-system')}}">Landscape Irrigation System</a>
               </li>
               <li id="menu-item-6714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6714">
-                <a href="services/planting-and-removal/index.html">Drip Irrigation System</a>
+                <a href="{{route('drip-irrigation-system')}}">Drip Irrigation System</a>
               </li>
               <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6712">
-                <a href="services/irrigation-and-drainage/index.html">Sprinkler Irrigation System</a>
+                <a href="{{route('sprinkler-irrigation-system')}}">Sprinkler Irrigation System</a>
               </li>
               <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6712">
-                <a href="services/irrigation-and-drainage/index.html">Solar Tube Well</a>
+                <a href="{{route('solar-tube-well')}}">Solar Tube Well</a>
               </li>
               <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6712">
-                <a href="services/irrigation-and-drainage/index.html">Solar Electric System</a>
+                <a href="{{route('solar-electric-system')}}">Solar Electric System</a>
               </li>
             </ul>
           </li>
           <li id="menu-item-6711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6711" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="services/index.html">Products</a>
+            <a href="{{route('home.products')}}">Products</a>
             <ul class="sub-menu" role="menu">
               <li id="menu-item-6713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6713">
-                <a href="services/lawn-and-garden-care/index.html">Filters</a>
+                <a href="{{route('filters')}}">Filters</a>
               </li>
               <li id="menu-item-6714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6714">
-                <a href="services/planting-and-removal/index.html">Drip Irrigation</a>
+                <a href="{{route('drip-irrigation')}}">Drip Irrigation</a>
               </li>
               <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6712">
-                <a href="services/irrigation-and-drainage/index.html">Sprinkler Irrigation</a>
+                <a href="{{route('sprinkler-irrigation')}}">Sprinkler Irrigation</a>
               </li>
               <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6712">
-                <a href="services/irrigation-and-drainage/index.html">Automated Irrigation</a>
+                <a href="{{route('automated-irrigation')}}">Automated Irrigation</a>
               </li>
             </ul>
           </li>
           <li id="menu-item-6711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6711" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="services/index.html">Services</a>
+            <a href="{{route('home.services')}}">Services</a>
             <ul class="sub-menu" role="menu">
               <li id="menu-item-6713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6713">
-                <a href="services/lawn-and-garden-care/index.html">Engineering Designs</a>
+                <a href="{{route('engineering-designs')}}">Engineering Designs</a>
               </li>
               <li id="menu-item-6714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6714">
-                <a href="services/planting-and-removal/index.html">Consultancy</a>
+                <a href="{{route('consultancy')}}">Consultancy</a>
               </li>
               <li id="menu-item-6712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6712">
-                <a href="services/irrigation-and-drainage/index.html">Professional Development Courses & Training</a>
+                <a href="{{route('professional-development-courses-training')}}">Professional Development Courses & Training</a>
               </li>
             </ul>
           </li>
           <li id="menu-item-6704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6704" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="galleries/index.html">Galleries</a>
+            <a href="{{route('home.galleries')}}">Galleries</a>
             <ul class="sub-menu" role="menu">
               <li id="menu-item-6705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6705">
-                <a href="galleries/gallery-classic/index.html">Landscape Irrigation Gallery</a>
+                <a href="{{route('landscape-irrigation-gallery')}}">Landscape Irrigation Gallery</a>
               </li>
               <li id="menu-item-6706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6706">
-                <a href="galleries/gallery-full-width/index.html">Drip Irrigation Gallery</a>
+                <a href="{{route('drip-irrigation-gallery')}}">Drip Irrigation Gallery</a>
               </li>
               <li id="menu-item-6707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6707">
-                <a href="galleries/gallery-lightbox/index.html">Sprinkler Irrigation Gallery</a>
+                <a href="{{route('sprinkler-irrigation-gallery')}}">Sprinkler Irrigation Gallery</a>
               </li>
               <li id="menu-item-6708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6708">
-                <a href="galleries/gallery-no-filter/index.html">Solar Tube Well Gallery</a>
+                <a href="{{route('solar-tube-well-gallery')}}">Solar Tube Well Gallery</a>
               </li>
               <li id="menu-item-6939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6939">
-                <a href="gallery/walkout-patio/index.html">Professional Training Gallery</a>
+                <a href="{{route('professional-training-gallery')}}">Professional Training Gallery</a>
               </li>
             </ul>
           </li>
           <li id="menu-item-6700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6700" aria-haspopup="true" aria-expanded="false" tabindex="0">
-            <a href="contact-us/index.html">Contact Us</a>
+            <a href="{{route('contact-us')}}">Contact Us</a>
             <ul class="sub-menu" role="menu">
               <li id="menu-item-6739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6739">
-                <a href="contact-us/index.html">Contact Us</a>
+                <a href="{{route('contact-us')}}">Contact Us</a>
               </li>
               <li id="menu-item-6709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6709">
-                <a href="make-an-appointment/index.html">Make an Appointment</a>
+                <a href="{{route('make-an-appointment')}}">Make an Appointment</a>
               </li>
             </ul>
           </li>

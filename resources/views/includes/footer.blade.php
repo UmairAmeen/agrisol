@@ -10,7 +10,7 @@
                   <div class="textwidget">
                     <p>The Landscaper is a premium WordPress theme designed &amp; built for landscaping and gardening companies. The theme have a drag and drop page builder, is fully customizable and responsive. Only available on ThemeForest.</p>
                     <p>
-                      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">More About US</a>
+                      <a class="btn btn-primary" href="{{route('about-us')}}" target="_blank" rel="noopener">More About US</a>
                     </p>
                   </div>
                 </div>
@@ -23,19 +23,22 @@
                   <div class="menu-footer-menu-container">
                     <ul id="menu-footer-menu" class="menu">
                       <li id="menu-item-6694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6694">
-                        <a href="shortcodes/index.html">Landscape Irrigation System</a>
+                        <a href="{{route('home.bussiness')}}">See All Bussiness</a>
+                      </li>
+                      <li id="menu-item-6694" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6694">
+                        <a href="{{route('landscape-irrigation-system')}}">Landscape Irrigation System</a>
                       </li>
                       <li id="menu-item-6696" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6696">
-                        <a target="_blank" rel="noopener" href="https://docs.qreativethemes.com/the-landscaper">Drip Irrigation System</a>
+                        <a target="_blank" rel="noopener" href="{{route('drip-irrigation-system')}}">Drip Irrigation System</a>
                       </li>
                       <li id="menu-item-6692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6692">
-                        <a href="make-an-appointment/index.html">Sprinkler Irrigation System</a>
+                        <a href="{{route('sprinkler-irrigation-system')}}">Sprinkler Irrigation System</a>
                       </li>
                       <li id="menu-item-6695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6695">
-                        <a href="case-study/index.html">Solar Tube Well</a>
+                        <a href="{{route('solar-tube-well')}}">Solar Tube Well</a>
                       </li>
                       <li id="menu-item-6691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6691">
-                        <a href="frequently-asked-questions/index.html">Solar Electric System</a>
+                        <a href="{{route('solar-electric-system')}}">Solar Electric System</a>
                       </li>
                     </ul>
                   </div>
@@ -49,16 +52,16 @@
                   <div class="menu-services-menu-container">
                     <ul id="menu-services-menu" class="menu">
                       <li id="menu-item-6684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6684">
-                        <a href="services/index.html">See all Services</a>
+                        <a href="{{route('home.services')}}">See all Services</a>
                       </li>
                       <li id="menu-item-6686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6686">
-                        <a href="services/lawn-and-garden-care/index.html">Engineering Designs</a>
+                        <a href="{{route('engineering-designs')}}">Engineering Designs</a>
                       </li>
                       <li id="menu-item-6687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6687">
-                        <a href="services/planting-and-removal/index.html">Consultancy</a>
+                        <a href="{{route('consultancy')}}">Consultancy</a>
                       </li>
                       <li id="menu-item-6685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6685">
-                        <a href="services/irrigation-and-drainage/index.html">Professional Development Courses & Training</a>
+                        <a href="{{route('professional-development-courses-training')}}">Professional Courses & Training</a>
                       </li>
                     </ul>
                   </div>

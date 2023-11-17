@@ -21,8 +21,8 @@ the way it should be" decoding="async" loading="eager" srcset="https://demos.qre
                   <h1 class="carousel-heading-tag">Your lawn and landscape <br /> the way it should be </h1>
                 </div>
                 <div class="carousel-content">
-                  <a href="about-us/index.html" class="btn btn-primary">More about us</a>
-                  <a href="contact-us/index.html" class="btn btn-outline">Get in touch</a>
+                  <a href="{{route('about-us')}}" class="btn btn-primary">More about us</a>
+                  <a href="{{route('contact-us')}}" class="btn btn-outline">Get in touch</a>
                 </div>
               </div>
             </div>
@@ -39,8 +39,8 @@ services since 1978" decoding="async" loading="eager" srcset="https://demos.qrea
                   <h2 class="carousel-heading-tag">We provide landscaping <br /> services since 1978 </h2>
                 </div>
                 <div class="carousel-content">
-                  <a href="services/index.html" class="btn btn-primary">See our Services</a>
-                  <a href="services/lawn-and-garden-care/index.html" class="btn btn-outline">Get in Touch</a>
+                  <a href="{{route('home.services')}}" class="btn btn-primary">See our Services</a>
+                  <a href="{{route('contact-us')}}" class="btn btn-outline">Get in Touch</a>
                 </div>
               </div>
             </div>
@@ -57,8 +57,8 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                   <h2 class="carousel-heading-tag">The grass is always greener on <br /> your side of the fence </h2>
                 </div>
                 <div class="carousel-content">
-                  <a href="galleries/gallery-classic/index.html" class="btn btn-primary">See our Gallery</a>
-                  <a href="galleries/index.html" class="btn btn-outline">Get in Touch</a>
+                  <a href="{{route('home.galleries')}}" class="btn btn-primary">See our Gallery</a>
+                  <a href="{{route('contact-us')}}" class="btn btn-outline">Get in Touch</a>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                     <div class="textwidget">
                       <p>We provide exceptional landscaping services to a wide range of commercial and residential properties for over 35 years, including large corporate environments, city parks, shopping malls and appartments. Our experienced landscapers set the standard each day in landscape design, paving, hardscaping. We will whip your yard into shape in no time.</p>
                       <p>
-                        <a class="more" href="services/index.html">SEE ALL SERVICES</a>
+                        <a class="more" href="{{route('home.services')}}">SEE ALL SERVICES</a>
                       </p>
                     </div>
                   </div>
@@ -98,7 +98,7 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
               <div id="pgc-11-0-1" class="panel-grid-cell">
                 <div id="panel-11-0-1-0" class="so-panel widget widget_qt_feature_page widget-featured-page panel-first-child panel-last-child" data-index="1">
                   <div class="post-item page">
-                    <a href="services/lawn-and-garden-care/index.html" class="post-item-image">
+                    <a href="{{route('engineering-designs')}}" class="post-item-image">
                       <img width="360" height="240" src="{{asset('themes/landing-pages/assets/images/trimming_hedge-360x240.jpg')}}" class="attachment-thelandscaper-featured-thumb size-thelandscaper-featured-thumb" alt="Theme Image" decoding="async" srcset="" sizes="(min-width: 781px) 360px, calc(100vw - 30px)" />
                       <div class="overlay">
                         <div class="vertical-center">
@@ -107,17 +107,17 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                       </div>
                     </a>
                     <h5 class="title">
-                      <a href="services/lawn-and-garden-care/index.html">Lawn &amp; Garden Care</a>
+                      <a href="{{route('engineering-designs')}}">Engineering Designs</a>
                     </h5>
                     <p>We understand that your property is a big investment and we want our customers to know that we are there for them to help them accomplish the dreams that they may have for there property.&hellip;</p>
-                    <a href="services/lawn-and-garden-care/index.html" class="more">Find out more</a>
+                    <a href="{{route('engineering-designs')}}" class="more">Find out more</a>
                   </div>
                 </div>
               </div>
               <div id="pgc-11-0-2" class="panel-grid-cell">
                 <div id="panel-11-0-2-0" class="so-panel widget widget_qt_feature_page widget-featured-page panel-first-child panel-last-child" data-index="2">
                   <div class="post-item page">
-                    <a href="services/planting-and-removal/index.html" class="post-item-image">
+                    <a href="{{route('consultancy')}}" class="post-item-image">
                       <img width="360" height="240" src="{{asset('themes/landing-pages/assets/images/tree_removal-360x240.jpg')}}" class="attachment-thelandscaper-featured-thumb size-thelandscaper-featured-thumb" alt="Theme Image" decoding="async" srcset="" sizes="(min-width: 781px) 360px, calc(100vw - 30px)" />
                       <div class="overlay">
                         <div class="vertical-center">
@@ -126,17 +126,17 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                       </div>
                     </a>
                     <h5 class="title">
-                      <a href="services/planting-and-removal/index.html">Planting &amp; Removal</a>
+                      <a href="{{route('consultancy')}}">Consultancy</a>
                     </h5>
                     <p>While tree removal is the choice of last resort, it is sometimes most necessary. Sick trees, trees that uproot sidewalks, cause cracks in the foundation, disrupt sewer lines, have sustained&hellip;</p>
-                    <a href="services/planting-and-removal/index.html" class="more">Find out more</a>
+                    <a href="{{route('consultancy')}}" class="more">Find out more</a>
                   </div>
                 </div>
               </div>
               <div id="pgc-11-0-3" class="panel-grid-cell">
                 <div id="panel-11-0-3-0" class="so-panel widget widget_qt_feature_page widget-featured-page panel-first-child panel-last-child" data-index="3">
                   <div class="post-item page">
-                    <a href="services/irrigation-and-drainage/index.html" class="post-item-image">
+                    <a href="{{route('professional-development-course-training')}}" class="post-item-image">
                       <img width="360" height="240" src="{{asset('themes/landing-pages/assets/images/irrigation-360x240.jpg')}}" class="attachment-thelandscaper-featured-thumb size-thelandscaper-featured-thumb" alt="Theme Image" decoding="async" srcset="" sizes="(min-width: 781px) 360px, calc(100vw - 30px)" />
                       <div class="overlay">
                         <div class="vertical-center">
@@ -145,10 +145,10 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                       </div>
                     </a>
                     <h5 class="title">
-                      <a href="services/irrigation-and-drainage/index.html">Irrigation &amp; Drainage</a>
+                      <a href="{{route('professional-development-course-training')}}">Professional Development Courses Training</a>
                     </h5>
                     <p>Watering your lawn and is the key to preserving its lushness and beauty. Whether you are looking for a brand new irrigation system to maintain your lawn or the replacement of a sprinkler&hellip;</p>
-                    <a href="services/irrigation-and-drainage/index.html" class="more">Find out more</a>
+                    <a href="{{route('professional-development-course-training')}}" class="more">Find out more</a>
                   </div>
                 </div>
               </div>
