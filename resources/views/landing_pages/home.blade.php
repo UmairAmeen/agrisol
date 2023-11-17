@@ -187,15 +187,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-636 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-636" href="gallery/modern-garden/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-636" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-636 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-636" href="gallery/modern-garden/index.html" target="_self">Garden,Terrace</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-636" href="#" target="_self">Garden,Terrace</a>
                                 </p>
                                 <div class="esg-content eg-post-636 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-636" href="gallery/modern-garden/index.html" target="_self">Modern Garden</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-636" href="#" target="_self">Modern Garden</a>
                                 </div>
                               </div>
                             </div>
@@ -208,15 +208,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-638 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-638" href="gallery/wooden-decks/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-638" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-638 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-638" href="gallery/wooden-decks/index.html" target="_self">Garden</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-638" href="#" target="_self">Garden</a>
                                 </p>
                                 <div class="esg-content eg-post-638 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-638" href="gallery/wooden-decks/index.html" target="_self">Wooden Decks</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-638" href="#" target="_self">Wooden Decks</a>
                                 </div>
                               </div>
                             </div>
@@ -229,15 +229,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-640 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-640" href="gallery/bistro-terrace/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-640" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-640 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-640" href="gallery/bistro-terrace/index.html" target="_self">Terrace</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-640" href="#" target="_self">Terrace</a>
                                 </p>
                                 <div class="esg-content eg-post-640 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-640" href="gallery/bistro-terrace/index.html" target="_self">Bistro Terrace</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-640" href="#" target="_self">Bistro Terrace</a>
                                 </div>
                               </div>
                             </div>
@@ -250,15 +250,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-2657 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-2657" href="gallery/walkout-patio/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-2657" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-2657 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-2657" href="gallery/walkout-patio/index.html" target="_self">Patio</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-2657" href="#" target="_self">Patio</a>
                                 </p>
                                 <div class="esg-content eg-post-2657 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-2657" href="gallery/walkout-patio/index.html" target="_self">Walkout Patio</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-2657" href="#" target="_self">Walkout Patio</a>
                                 </div>
                               </div>
                             </div>
@@ -271,15 +271,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-642 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-642" href="gallery/garden-pond/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-642" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-642 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-642" href="gallery/garden-pond/index.html" target="_self">Patio,Pond</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-642" href="#" target="_self">Patio,Pond</a>
                                 </p>
                                 <div class="esg-content eg-post-642 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-642" href="gallery/garden-pond/index.html" target="_self">Garden Pond</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-642" href="#" target="_self">Garden Pond</a>
                                 </div>
                               </div>
                             </div>
@@ -292,15 +292,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-644 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-644" href="gallery/modern-patio/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-644" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-644 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-644" href="gallery/modern-patio/index.html" target="_self">Patio</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-644" href="#" target="_self">Patio</a>
                                 </p>
                                 <div class="esg-content eg-post-644 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-644" href="gallery/modern-patio/index.html" target="_self">Modern Patio</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-644" href="#" target="_self">Modern Patio</a>
                                 </div>
                               </div>
                             </div>
@@ -313,15 +313,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-648 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-648" href="gallery/town-pond/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-648" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-648 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-648" href="gallery/town-pond/index.html" target="_self">Pond</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-648" href="#" target="_self">Pond</a>
                                 </p>
                                 <div class="esg-content eg-post-648 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-648" href="gallery/town-pond/index.html" target="_self">Town Pond</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-648" href="#" target="_self">Town Pond</a>
                                 </div>
                               </div>
                             </div>
@@ -334,15 +334,15 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                               <div class="esg-entry-cover">
                                 <div class="esg-overlay esg-transition eg-the-landscaper-home-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
                                 <div class="esg-center eg-post-650 eg-the-landscaper-home-element-2-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slidedown">
-                                  <a class="eg-the-landscaper-home-element-2 eg-post-650" href="gallery/mediterran-garden/index.html" target="_self">View Gallery</a>
+                                  <a class="eg-the-landscaper-home-element-2 eg-post-650" href="#" target="_self">View Gallery</a>
                                 </div>
                               </div>
                               <div class="esg-entry-content eg-the-landscaper-home-content">
                                 <p class="esg-content eg-post-650 eg-the-landscaper-home-element-4-a">
-                                  <a class="eg-the-landscaper-home-element-4 eg-post-650" href="gallery/mediterran-garden/index.html" target="_self">Garden</a>
+                                  <a class="eg-the-landscaper-home-element-4 eg-post-650" href="#" target="_self">Garden</a>
                                 </p>
                                 <div class="esg-content eg-post-650 eg-the-landscaper-home-element-0-a">
-                                  <a class="eg-the-landscaper-home-element-0 eg-post-650" href="gallery/mediterran-garden/index.html" target="_self">Mediterrán Garden</a>
+                                  <a class="eg-the-landscaper-home-element-0 eg-post-650" href="#" target="_self">Mediterrán Garden</a>
                                 </div>
                               </div>
                             </div>
@@ -380,7 +380,7 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                     <p>The Landscaper is made up of a group of highly skilled landscaping professionals who pays a lot of attention to small details. In the 30+ years of experience our staff keep your property looking and functioning beautifully. Our landscapers are fully licensed</p>
                     <p>The reason; by doing this you are able to communicate and work with a single individual, where you can share your thoughts and idea's with to bring them, in collaboration...</p>
                     <p>
-                      <a class="more" href="about-us/index.html">MORE ABOUT US</a>
+                      <a class="more" href="#">MORE ABOUT US</a>
                     </p>
                   </div>
                 </div>
@@ -475,7 +475,7 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
             <div id="pg-11-4" class="panel-grid panel-no-style">
               <div id="pgc-11-4-0" class="panel-grid-cell">
                 <div id="panel-11-4-0-0" class="so-panel widget widget_qt_icon_box widget-icon-box panel-first-child" data-index="9">
-                  <a class="icon-box icon-small" href="services/index.html">
+                  <a class="icon-box icon-small" href="#">
                     <i class="fa fas fa-leaf"></i>
                     <h6 class="title">Specialized Company</h6>
                     <span class="subtitle">We are a landscaping company specialize in residential and commercial landscaping</span>
@@ -514,7 +514,7 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                   </div>
                 </div>
                 <div id="panel-11-4-2-1" class="so-panel widget widget_qt_icon_box widget-icon-box panel-last-child" data-index="14">
-                  <a class="icon-box icon-small" href="services/index.html">
+                  <a class="icon-box icon-small" href="#">
                     <i class="fa fas fa-trophy"></i>
                     <h6 class="title">Reputable Company</h6>
                     <span class="subtitle">Operating for more than 30 years, earning a reputation for service and beautiful work</span>
@@ -537,8 +537,8 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                         <div class="cta-banner-title" style="color: #ffffff;">Are you tired of spending hours mowing your lawn every weekend? <br>Take back your free time by having us take care of your garden </div>
                       </div>
                       <div class="cta-banner-buttons">
-                        <a href="services/index.html" class="btn btn-outline" target="_self">See all Services</a>
-                        <a href="contact-us/index.html" class="btn btn-outline" target="_self">Send a Message</a>
+                        <a href="#" class="btn btn-outline" target="_self">See all Services</a>
+                        <a href="#" class="btn btn-outline" target="_self">Send a Message</a>
                       </div>
                       <div class="clearfix"></div>
                     </div>
@@ -558,12 +558,12 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                   <div id="panel-11-6-0-0" class="so-panel widget widget_qt_recent_posts_block widget_post_block panel-first-child panel-last-child" data-index="16">
                     <div class="block-posts">
                       <h3 class="widget-title">
-                        <span class="light">Latest</span> News <a href="blog/index.html" class="more">More News</a>
+                        <span class="light">Latest</span> News <a href="#" class="more">More News</a>
                       </h3>
                       <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-4">
                           <article class="post-item news">
-                            <a href="why-the-landscaper-is-the-best-for-business/index.html" class="post-item-image">
+                            <a href="#" class="post-item-image">
                               <img width="360" height="203" src="{{asset('themes/landing-pages/assets/images/news_3-360x203.jpg')}}" class="attachment-thelandscaper-news-small size-thelandscaper-news-small" alt="Theme Image" decoding="async" srcset="" sizes="(min-width: 781px) 360px, calc(100vw - 30px)" />
                               <div class="label-wrap">
                                 <span class="label date">March 15, 2021</span>
@@ -572,16 +572,16 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                             </a>
                             <div class="post-item-content">
                               <h5 class="title">
-                                <a href="why-the-landscaper-is-the-best-for-business/index.html">Why The Landscaper Is The Best For Business</a>
+                                <a href="#">Why The Landscaper Is The Best For Business</a>
                               </h5>
                               <p> The Landscaper is a WordPress theme build for Lawn and Landscaping Companies, and other companies with related services.... </p>
-                              <a href="why-the-landscaper-is-the-best-for-business/index.html" class="more">Read Post</a>
+                              <a href="#" class="more">Read Post</a>
                             </div>
                           </article>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-4">
                           <article class="post-item news">
-                            <a href="we-won-the-best-landscape-company-award/index.html" class="post-item-image">
+                            <a href="#" class="post-item-image">
                               <img width="360" height="203" src="{{asset('themes/landing-pages/assets/images/team4-m-min-360x203.jpg')}}" class="attachment-thelandscaper-news-small size-thelandscaper-news-small" alt="Theme Image" decoding="async" srcset="" sizes="(min-width: 781px) 360px, calc(100vw - 30px)" />
                               <div class="label-wrap">
                                 <span class="label date">March 17, 2021</span>
@@ -589,16 +589,16 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                             </a>
                             <div class="post-item-content">
                               <h5 class="title">
-                                <a href="we-won-the-best-landscape-company-award/index.html">We Won The &#8216;Best Landscape Company&#8217; Award</a>
+                                <a href="#">We Won The &#8216;Best Landscape Company&#8217; Award</a>
                               </h5>
                               <p> Yesterday we were awarded with the &#8216;Best Landscaper Of The Country&#8217; award.&nbsp;These award of excellence... </p>
-                              <a href="we-won-the-best-landscape-company-award/index.html" class="more">Read Post</a>
+                              <a href="#" class="more">Read Post</a>
                             </div>
                           </article>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-4">
                           <article class="post-item news">
-                            <a href="job-fulltime-50-hours-perweek-landscaper/index.html" class="post-item-image">
+                            <a href="#" class="post-item-image">
                               <img width="360" height="203" src="{{asset('themes/landing-pages/assets/images/team2-m-e-min-360x203.jpg')}}" class="attachment-thelandscaper-news-small size-thelandscaper-news-small" alt="Theme Image" decoding="async" srcset="" sizes="(min-width: 781px) 360px, calc(100vw - 30px)" />
                               <div class="label-wrap">
                                 <span class="label date">March 17, 2021</span>
@@ -606,10 +606,10 @@ your side of the fence" decoding="async" loading="eager" srcset="https://demos.q
                             </a>
                             <div class="post-item-content">
                               <h5 class="title">
-                                <a href="job-fulltime-50-hours-perweek-landscaper/index.html">Job: Fulltime (+50 hours per week) Landscapers</a>
+                                <a href="#">Job: Fulltime (+50 hours per week) Landscapers</a>
                               </h5>
                               <p> Are you a top producer who is looking to show your landscaping skills to us and be fairly rewarded? Are you able to... </p>
-                              <a href="job-fulltime-50-hours-perweek-landscaper/index.html" class="more">Read Post</a>
+                              <a href="#" class="more">Read Post</a>
                             </div>
                           </article>
                         </div>
