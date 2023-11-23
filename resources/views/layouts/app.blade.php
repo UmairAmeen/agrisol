@@ -213,7 +213,7 @@
       });
     </script>
     <script type='text/javascript' src="{{asset('themes/landing-pages/assets/plugins/bootstrap/js/bootstrap.custom.min.js')}}"></script>
-    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/underscore.min.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/underscore.js')}}"></script>
     <script type='text/javascript'>var TheLandscaper = {};</script>
     <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/main.js')}}"></script>
     <script type='text/javascript'>
@@ -273,6 +273,11 @@
         jQuery(easy_fancybox_auto);
       });
     </script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/eventmove.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/twentytwenty.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/before-after-slider.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/waypoints.js')}}"></script>
+    <script type='text/javascript' src="{{asset('themes/landing-pages/assets/js/countbox.js')}}"></script>
     @yield('script')
 
 </body>
