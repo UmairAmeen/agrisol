@@ -120,7 +120,7 @@
     <!-- Scripts -->
     <script src="{{asset('themes/admin-panel/assets/plugins/jquery/jquery.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/popper/popper.js')}}"></script>
-    <script src="{{asset('themes/admin-panel/assets/plugins/bootstrap/js/bootstrap.js')}}"></script>
+    <script src="{{asset('themes/admin-panel/assets/plugins/bootstrap/bootstrap.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/node-waves/node-waves.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
     <script src="{{asset('themes/admin-panel/assets/plugins/toastr/toastr.js')}}"></script>

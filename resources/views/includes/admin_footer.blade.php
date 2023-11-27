@@ -2,8 +2,8 @@
   <div class="container-xxl">
     <div class="footer-container d-flex align-items-center justify-content-between py-3 flex-md-row flex-column">
       <div class="mb-2 mb-md-0">
-        <!-- © <script>document.write(new Date().getFullYear())</script>,
-        made with <span class="text-danger"><i class="tf-icons mdi mdi-heart"></i></span> by <a href="https://pixinvent.com/" target="_blank" class="footer-link fw-medium">Pixinvent</a> -->
+        © <script>document.write(new Date().getFullYear())</script>,
+        View Your Site <span class="text-danger"></span><a href="{{route('home')}}" target="_blank" class="footer-link fw-medium">Smart AgriSol</a>
       </div>
       <!-- <div class="d-none d-lg-inline-block">
         <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank">License</a>
